@@ -13,7 +13,9 @@
     <div class="search">
       <form action="">
         <input type="text">
-        <div class="nav_search_btn">search</div>
+        <div class="nav_search_btn">
+          <button type="button" class="nav-search-submit"></button>
+        </div>
       </form>
     </div>
     <div class="action">
@@ -33,7 +35,7 @@
 
 <style lang="scss">
 .navheader-box {
-  min-width: 1005px;
+  min-width: 650px;
   height: 56px;
   position:absolute;
   width: 100%;
@@ -53,10 +55,14 @@
         min-width: 32px;
       }
     }
+    .pages {
+      flex:none;
+    }
     .search {
-      flex-shrink: 0;
-      width: 500px;
+      flex:1;
+      max-width: 500px;
       position: relative;
+      margin-right: 12px;
       form {
         padding: 0 38px 0 16px;
         border: 1px solid rgba(255, 255, 255, 0);
@@ -83,8 +89,14 @@
           border-radius: 2px;
           background: #e7e7e7;
           cursor: pointer;
+          .nav-search-submit::before{
+            content:"\E72C";
+          }
         }
       }
+    }
+    .action {
+      flex:none;
     }
   }
 }
