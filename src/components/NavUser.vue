@@ -13,8 +13,9 @@
     <div class="search">
       <form action="">
         <input type="text">
-        <div class="nav_search_btn">
-          <button type="button" class="nav-search-submit"></button>
+        <div class="nav-search-btnbox">
+          <button type="button" class="nav-search-btn icon-search">
+          </button>
         </div>
       </form>
     </div>
@@ -77,10 +78,10 @@
           outline: none;
           height: 34px;
         }
-        .nav_search_btn {
+        .nav-search-btnbox {
           position: absolute;
-          right: 0;
-          top: 0;
+          right: 0px;
+          top: 0px;
           margin: 0;
           padding: 0;
           width: 48px;
@@ -88,9 +89,19 @@
           border: none;
           border-radius: 2px;
           background: #e7e7e7;
-          cursor: pointer;
-          .nav-search-submit::before{
-            content:"\E72C";
+          // :hover {
+          //   color:red;
+          // }
+          .nav-search-btn {
+            cursor: pointer;
+            width: 100%;
+            height: 100%;
+            color: #505050;
+            transition: all .2s;
+            font-size: 14px;
+          }
+          .nav-search-btn:hover {
+            color:#00a1d6;
           }
         }
       }

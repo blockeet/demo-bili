@@ -1,0 +1,57 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?antjie');
+  src:  url('fonts/icomoon.eot?antjie#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?antjie') format('truetype'),
+    url('fonts/icomoon.woff?antjie') format('woff'),
+    url('fonts/icomoon.svg?antjie#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-play:before {
+  content: "\e912";
+}
+.icon-qrcode:before {
+  content: "\e938";
+}
+.icon-mobile:before {
+  content: "\e958";
+}
+.icon-tv:before {
+  content: "\e95b";
+}
+.icon-search:before {
+  content: "\e986";
+}
+.icon-volume-high:before {
+  content: "\ea26";
+}
+.icon-volume-medium:before {
+  content: "\ea27";
+}
+.icon-volume-low:before {
+  content: "\ea28";
+}
+.icon-volume-mute:before {
+  content: "\ea29";
+}
+.icon-volume-mute2:before {
+  content: "\ea2a";
+}
