@@ -3,10 +3,17 @@
   <div class="navheader">
     <div class="pages">
       <ul>
-        <li>logo</li>
+        <!-- <li></li> -->
         <li>主站</li>
         <li>番剧</li>
-        <li>漫画</li>
+        <li>
+          <span>
+            <a href="JavaScript:;">漫画</a>
+            <div class="popover">
+              lalalal
+            </div>
+          </span>
+          </li>
         <li>下载App</li>
       </ul>
     </div>
@@ -112,3 +119,15 @@
   }
 }
 </style>
+
+<script>
+export default {
+  name: 'NavHeader',
+  methods: {
+    showModel () {
+
+    }
+  }
+
+}
+</script>

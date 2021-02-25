@@ -11,6 +11,21 @@ html {
     padding: 0;
     margin: 0;
   }
+  a {
+    text-decoration: none;
+    :link {
+      text-decoration: none;
+    }
+    :visited {
+      text-decoration: none;
+    }
+    :hover {
+      text-decoration: none;
+    }
+    :focus {
+      text-decoration: none;
+    }
+  }
 }
 html, body {
   padding: 0;
