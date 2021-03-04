@@ -7,13 +7,31 @@
         <li>主站</li>
         <li>番剧</li>
         <li>
-          <span>
-            <a href="JavaScript:;">漫画</a>
-            <div class="popover">
-              lalalal
-            </div>
-          </span>
-          </li>
+          <el-popover @show="getCartoonList"
+           placement="bottom-start"
+           :open-delay=500
+           trigger="hover">
+           <div class="pop-content">
+             <div class="panels" >
+               <div class="panel" v-for="item in cartoonPanels" :key="item.name" >
+                 <div class="img">{{item.name}}</div>
+                 <div>name</div>
+               </div>
+             </div>
+             <hr>
+             <div class="list">
+               <div class="list-title">人气漫画</div>
+               <div v-for="(name, index) in cartoonList" :key="index">
+                 <a href="javascript:;">
+                   <span>{{index + 1}}</span>
+                   <span>{{name.cartoonName}}</span>
+                 </a>
+               </div>
+             </div>
+           </div>
+           <a href="Javascript:;" slot="reference">漫画</a>
+         </el-popover>
+        </li>
         <li>下载App</li>
       </ul>
     </div>
@@ -42,10 +60,11 @@
 </template>
 
 <style lang="scss">
+@import './../assets/scss/popover.scss';
 .navheader-box {
   min-width: 650px;
   height: 56px;
-  position:absolute;
+  // position:absolute;
   width: 100%;
   .navheader {
     display: flex;
@@ -96,9 +115,6 @@
           border: none;
           border-radius: 2px;
           background: #e7e7e7;
-          // :hover {
-          //   color:red;
-          // }
           .nav-search-btn {
             cursor: pointer;
             width: 100%;
@@ -123,11 +139,25 @@
 <script>
 export default {
   name: 'NavHeader',
+  data () {
+    return {
+      cartoonPanels: Array,
+      cartoonList: Array
+    }
+  },
   methods: {
-    showModel () {
-
+    getCartoonList () {
+      this.cartoonPanels = [
+        { name: 1 },
+        { name: 2 },
+        { name: 3 },
+        { name: 4 }
+      ]
+      this.cartoonList = [
+        { cartoonName: 1 },
+        { cartoonName: 2 }
+      ]
     }
   }
-
 }
 </script>
