@@ -9,7 +9,7 @@
         <li>
           <el-popover @show="getCartoonList"
            placement="bottom-start"
-           :open-delay=500
+           :open-delay=300
            trigger="hover">
            <div class="pop-content">
              <div class="panels" >
@@ -64,8 +64,9 @@
 .navheader-box {
   min-width: 650px;
   height: 56px;
-  // position:absolute;
+  position:absolute;
   width: 100%;
+  z-index: 1;
   .navheader {
     display: flex;
     justify-content: space-between;
